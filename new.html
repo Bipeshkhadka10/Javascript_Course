@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissor</title>
+    <!-- <link rel="stylesheet" href="papergame.css"> -->
+
+</head>
+<body>
+    <h1>Rock Paper Scissor Game</h1>
+    <div id="choices">
+        <button onclick="playgame('rock')">👊</button>
+        <button onclick="playgame('scissor')">✌️</button>
+        <button onclick="playgame('paper')">🫱</button>
+    </div>
+
+    <h2 id="result"></h2>
+    <script>
+        function playgame(playerchoice){
+    const choices = ["rock","paper","scissor"];
+    const computerchoice= choices[Math.floor(Math.random()*3)]
+    let result;
+    if (playerchoice === computerchoice) {
+        result = "its a tie"
+        
+    }else if( playerchoice === "scissor" && computerchoice === "paper" ||
+             playerchoice === "stone" && computerchoice === "scissor"||
+             playerchoice === "paper" && computerchoice === "stone")
+            {
+               result="congraturlation you won";
+             }else{
+               result="sorry you loose";
+             }
+            
+             document.getElementById("result").innerHTML = "playerchoice: " + playerchoice +" <br>" +
+             "computerChoice: " + computerchoice + "<br>" +
+             "result: " + result ;
+             
+    }
+
+
+    </script>
+</body>
+</html>

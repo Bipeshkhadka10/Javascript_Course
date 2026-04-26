@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>user choice:</h2>
+    <button onclick="play('stone')">stone</button>
+    <button onclick="play('scissor')">scissor</button>
+    <button onclick="play('paper')">paper</button>
+    <br>
+    <h3 id="result"></h3>
+    <script>
+        function play(userChoice){
+            let choice = ["paper","stone","scissor"]
+            let random = Math.floor(Math.random()*3)
+            let computerChoic = choice[random]
+
+            let result;
+
+            if(userChoice === computerChoic){
+                result = "draw";
+            }else if( userChoice === "scissor" && computerChoic === "paper" ||
+             userChoice === "stone" && computerChoic === "scissor"||
+             userChoice === "paper" && computerChoic === "stone")
+             
+        }
+    </script>
+</body>
+</html>
