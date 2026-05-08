@@ -1,24 +1,24 @@
 // localstorage
 // methods
 // 1. setItem("key","value")
-//  function handleSave(){
-//     let name = document.getElementById("name").value;
-//     let age = document.getElementById("age").value;
-//     localStorage.setItem("name",name)
-//     localStorage.setItem("age",age)
-//     alert("data saved")
-//  }
+ function handleSave(){
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    localStorage.setItem("name",name)
+    localStorage.setItem("age",age)
+    alert("data saved")
+ }
 
 // //  2. getItem("key")
-//  function handleShow(){
-//     let name = localStorage.getItem("name");
-//     let age = localStorage.getItem("age")
-//     alert(`the name is ${name} and age is ${age}`)
+ function handleShow(){
+    let name = localStorage.getItem("name");
+    let age = localStorage.getItem("age")
+    alert(`the name is ${name} and age is ${age}`)
 
-//     let div = document.querySelector("div");
-//     div.innerHTML = "<h1>name:" + name +"</h1>" + "<br>" + "age: " + age
+    let div = document.querySelector("div");
+    div.innerHTML = "<h1>name:" + name +"</h1>" + "<br>" + "age: " + age
  
-//  }
+ }
 
 // //  3. removeItem("key")
 
