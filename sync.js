@@ -129,19 +129,33 @@ let student1=[
 
 // promise.then(()=>{
 //  console.log("data get successfully")})
-checkStudent(student1[0])
-.then((rev)=>{
-    console.log("data loaded succesfully..",rev)
-    return checkStudent(student1[1])
-})
-.then((rev)=>{
-    console.log("data loaded succesfully..",rev)
-    return checkStudent(student1[2])
-})
-.then((rev)=>{
-    console.log("data loaded succesfully..",rev)
-    console.log("all data loaded")
-})
-.catch((err)=>{
-    console.error(err)
-})
+// checkStudent(student1[0])
+// .then((rev)=>{
+//     console.log("data loaded succesfully..",rev)
+//     return checkStudent(student1[1])
+// })
+// .then((rev)=>{
+//     console.log("data loaded succesfully..",rev)
+//     return checkStudent(student1[2])
+// })
+// .then((rev)=>{
+//     console.log("data loaded succesfully..",rev)
+//     console.log("all data loaded")
+// })
+// .catch((err)=>{
+//     console.error(err)
+// })
+
+// async /await
+(async function showResult(){
+    console.log("data is loading.....")
+    console.log(await checkStudent(student1[0]) )
+    console.log("loaded data1.")
+      console.log(await checkStudent(student1[1]) )
+    console.log("loaded data2.")
+      console.log(await checkStudent(student1[2]) )
+    console.log("loaded data3.")
+    console.log("successfully loaded all data")   
+})();
+
+// showResult()
